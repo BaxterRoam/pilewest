@@ -1,0 +1,13 @@
+.menu {
+  position: absolute;
+  inset: 0;
+  top: 6rem;
+  bottom: auto;
+
+  z-index: 99;
+
+  padding: 7rem 0 1rem 0;
+
+  color: var(--c-dark-700);
+  background-color: var(--c-light-100);
+}

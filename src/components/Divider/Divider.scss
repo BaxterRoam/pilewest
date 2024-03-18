@@ -1,0 +1,25 @@
+.divider {
+  position: absolute;
+  z-index: 3;
+
+  height: 64px;
+  width: 100%;
+
+  transform: translateY(-2rem);
+
+  .top-left {
+    fill: transparent;
+  }
+
+  .top-right {
+    fill: var(--c-dark-700);
+  }
+
+  .bottom-left {
+    fill: var(--c-accent-500);
+  }
+
+  .bottom-right {
+    fill: transparent;
+  }
+}

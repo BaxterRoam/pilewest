@@ -1,0 +1,45 @@
+.menu-item {
+  padding: 0 10%;
+
+  &__link {
+    &:hover {
+      color: var(--c-accent-500);
+      transition: color 0.3s ease 0s;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem 0;
+  }
+
+  &__dropdown-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    transition: transform 0.3s ease;
+
+    &--active {
+      transform: scaleY(-1);
+    }
+  }
+
+  &__dropdown {
+    display: none;
+
+    position: relative;
+    transition: height 0.8s ease 0s;
+
+    > .menu-item {
+      padding: 0 5%;
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+}

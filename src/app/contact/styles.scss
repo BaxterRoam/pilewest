@@ -1,0 +1,103 @@
+.contact-page {
+  h1 {
+    text-transform: uppercase;
+  }
+
+  .section {
+    justify-content: flex-start;
+  }
+
+  .section-container {
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      padding: 1rem 0.5rem;
+      background-color: var(--c-light-300);
+      border: none;
+      border-radius: 0.25rem;
+
+      font-family: inherit;
+
+      &:focus {
+        outline: 2px solid var(--c-accent-500);
+      }
+    }
+
+    textarea {
+      min-height: 12rem;
+      resize: vertical;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      background-color: var(--c-accent-500);
+      border: none;
+      border-radius: 0.25rem;
+
+      color: var(--c-light-100);
+      font-family: inherit;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      transition: 0.3s ease;
+
+      &:hover {
+        color: var(--c-accent-500);
+        background-color: var(--c-dark-700);
+      }
+    }
+  }
+
+  .contact-entry {
+    h3 {
+      width: 100%;
+      margin-top: 1rem;
+      border-bottom: 1px solid var(--c-light-500);
+    }
+  }
+
+  .contact-label {
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      color: var(--c-accent-500);
+    }
+  }
+
+  iframe {
+    width: 100%;
+    border: none;
+    margin-top: 2rem;
+  }
+
+  .flex {
+    display: flex;
+    gap: 1rem;
+  }
+}

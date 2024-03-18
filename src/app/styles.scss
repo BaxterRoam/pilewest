@@ -1,0 +1,42 @@
+.home-page {
+  &__hero + .divider {
+    .bottom-right {
+      fill: white;
+    }
+    .top-right {
+      fill: white;
+    }
+  }
+
+  &__about,
+  &__capabilities,
+  &__benefits {
+    &__cta {
+      display: grid;
+      place-items: center;
+      padding-top: 1rem;
+    }
+  }
+
+  &__benefits + .divider {
+    .bottom-left {
+      fill: var(--c-dark-700);
+    }
+
+    .top-right {
+      fill: var(--c-accent-500);
+    }
+  }
+
+  &__testimonials {
+    .section-header {
+      align-items: center;
+    }
+  }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

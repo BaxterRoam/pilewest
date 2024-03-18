@@ -1,0 +1,27 @@
+.sheet-piling-page {
+  &__hero + .divider {
+    .top-right {
+      fill: var(--c-light-100);
+    }
+
+    .bottom-right {
+      fill: var(--c-light-100);
+    }
+  }
+
+  &__about {
+    ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+
+      li {
+        line-height: 1.8;
+      }
+    }
+
+    img {
+      border-radius: 0.25rem;
+      box-shadow: var(--bs-light);
+    }
+  }
+}

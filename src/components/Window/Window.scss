@@ -1,0 +1,150 @@
+.window {
+  position: relative;
+
+  height: 100vh;
+
+  background-color: var(--c-dark-700);
+
+  &__images {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+
+    &--active {
+      opacity: 0.8;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2px;
+  }
+
+  .item {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    transition: padding 0.3s ease;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+      background-color: hsla(0, 0%, 0%, 0.5);
+    }
+
+    .cta {
+      margin-top: 2rem;
+
+      opacity: 0;
+    }
+
+    &--active {
+      .item__heading {
+        opacity: 1;
+      }
+
+      .cta {
+        margin-top: 0;
+
+        opacity: 1;
+      }
+    }
+
+    &__heading {
+      position: relative;
+      z-index: 2;
+
+      color: white;
+      opacity: 0.5;
+
+      transition: all 0.5s ease;
+
+      border-bottom: none;
+    }
+
+    .cta {
+      color: var(--c-light-100);
+
+      position: absolute;
+      z-index: 2;
+      top: 66%;
+      left: 50%;
+
+      border: 1.5px solid white;
+
+      transform: translate(-50%, -50%);
+
+      &:hover {
+        border: 1.5px solid var(--c-accent-500);
+      }
+
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .window {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 1024px) {
+  .window {
+    .item--active {
+      .item__heading {
+        transform: translateY(-2rem);
+      }
+    }
+
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .window {
+    &__items {
+      grid-template-columns: 1fr;
+    }
+
+    .item--active {
+      padding-bottom: 4rem;
+
+      .item__heading {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+}

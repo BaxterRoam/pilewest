@@ -1,0 +1,27 @@
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 6rem;
+
+  padding: 4rem 10%;
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+}
