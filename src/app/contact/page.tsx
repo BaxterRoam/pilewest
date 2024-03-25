@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@/icons";
+import { PhoneIcon, EnvelopeIcon, MapPinIcon, SpinnerIcon } from "@/icons";
 
 import "./styles.scss";
 
@@ -12,9 +12,11 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [submissionStatus, setSubmissionStatus] = useState("send message");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmissionStatus("sending message");
 
     try {
       const response = await fetch("/api/email", {
@@ -27,13 +29,32 @@ export default function Contact() {
 
       if (response.ok) {
         // Form submission was successful, you can show a success message or redirect the user.
+        setSubmissionStatus("message sent");
         console.log("Form submitted successfully");
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
       } else {
         // Handle error if form submission fails.
+        setSubmissionStatus("error sending message");
         console.error("Form submission failed");
       }
     } catch (error) {
       console.error("An error occurred while submitting the form:", error);
+    }
+  };
+
+  const getButtonClass = () => {
+    switch (submissionStatus) {
+      case "sending message":
+        return "button--status-sending";
+      case "message sent":
+        return "button--status-success";
+      case "error sending message":
+        return "button--status-error";
+      default:
+        return "button--status-default";
     }
   };
 
@@ -62,7 +83,11 @@ export default function Contact() {
                 <label htmlFor="message">Message:</label>
                 <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
               </div>
-              <button type="submit">Submit</button>
+              {submissionStatus == "sending message" ? (
+                <button type="submit" className={`button ${getButtonClass()}`}>{<SpinnerIcon />}{submissionStatus}</button>
+              ) : (
+                <button type="submit" className={`button ${getButtonClass()}`}>{submissionStatus}</button>
+              )}
             </form>
             <div className="contact-information">
               <div className="contact-entry">

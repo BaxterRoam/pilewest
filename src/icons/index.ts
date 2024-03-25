@@ -8,3 +8,4 @@ export * from "./EnvelopeIcon";
 export * from "./MapPinIcon";
 export * from "./PhoneIcon";
 export * from "./PlusIcon";
+export * from "./SpinnerIcon";
