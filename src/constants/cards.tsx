@@ -28,7 +28,7 @@ export const statistics = [
   },
   {
     heading: "1500+",
-    body: "Tonne's of steel piles installed",
+    body: "Tonnes of steel piles installed",
   },
 ];
 

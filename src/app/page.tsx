@@ -19,7 +19,7 @@ export default function Home() {
           <CarouselItem
             image="/images/backgrounds/home-002.jpg"
             heading="Quality Piling Solutions"
-            body="Our goal is to deliver a quality piling solution for your next project that will expectations with quality, cost-effective, and timely installations."
+            body="Our goal is to deliver a quality piling solution for your next project that will exceed expectations with quality, cost-effective, and timely installations."
             isHero
           />
           <CarouselItem
