@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
-
-import { CTA } from "@/components";
 
 import "./Window.scss";
 
@@ -16,7 +15,7 @@ export type WindowProps = {
 };
 
 export default function Window({ items }: WindowProps) {
-  const [itemIndex, setItemIndex] = useState(-1);
+  const [itemIndex, setItemIndex] = useState(0);
 
   return (
     <div className="window">
@@ -34,15 +33,17 @@ export default function Window({ items }: WindowProps) {
       </div>
       <div className="window__items">
         {items.map((item, index) => (
-          <div
+          <Link
             key={index}
+            href={item.href}
             className={`item ${index == itemIndex && `item--active`}`}
             onMouseOver={() => setItemIndex(index)}
-            onMouseOut={() => setItemIndex(-1)}
+            onMouseOut={() => setItemIndex(0)}
           >
-            <h3 className="item__heading">{item.heading}</h3>
-            <CTA href={item.href} label="Learn More" />
-          </div>
+            <div>
+              <h3 className="item__heading">{item.heading}</h3>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
