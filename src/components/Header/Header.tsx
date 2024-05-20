@@ -24,7 +24,6 @@ export default function Header() {
         <Logo />
         <div className="header__navbar">
           <Navbar items={contacts} seperator />
-          <Navbar items={routes} />
         </div>
         <button
           className="header__menu-button"

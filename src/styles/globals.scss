@@ -59,7 +59,11 @@ p {
 }
 
 h1 {
-  font-size: clamp(2em, 4vw, 3.2em);
+  font-size: var(--fs-l);
+  text-transform: uppercase;
+  width: fit-content;
+  border-bottom: 2px solid var(--c-accent-500);
+  margin-bottom: 2rem;
 }
 
 h2 {

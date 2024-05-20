@@ -42,8 +42,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Providers>
           <Header />
           {children}
-          <GetInTouch />
-          <Footer />
+          {/* <GetInTouch /> */}
+          {/* <Footer /> */}
         </Providers>
         <Analytics />
         <SpeedInsights />

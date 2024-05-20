@@ -49,11 +49,11 @@ const services = [
 export default function Services() {
   return (
     <main className="services-page">
-      <section className="services-page__hero hero">
+      {/* <section className="services-page__hero hero">
         <Carousel>
           <CarouselItem image="/images/backgrounds/services-001.jpg" heading="Our Services" isHero />
         </Carousel>
-      </section>
+      </section> */}
       <section className="services-page__cards">
         {services.map((item, index) => (
           <div key={index} className="card">

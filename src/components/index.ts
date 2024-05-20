@@ -14,3 +14,4 @@ export * from "./Slider";
 export * from "./GetInTouch";
 export * from "./Footer";
 export * from "./Email";
+export * from "./Services";

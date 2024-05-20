@@ -27,7 +27,7 @@ export function TextCard({ heading, body, theme }: TextCardProps) {
     <div className={`card card--text ${theme && `card--${theme}`}`}>
       <div className="card__container">
         <div className="card__content">
-          {heading && <h3 className="card__heading">{heading}</h3>}
+          {heading && <h2 className="card__heading">{heading}</h2>}
           {body && <p className="card__body">{body}</p>}
         </div>
       </div>
