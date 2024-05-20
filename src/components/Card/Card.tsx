@@ -5,7 +5,7 @@ import "./Card.scss";
 export type TextCardProps = {
   heading?: string;
   body?: string;
-  theme: "light" | "dark";
+  theme?: "light" | "dark";
 };
 
 export type IconCardProps = {

@@ -3,7 +3,9 @@ import { CTA, TextCardProps, TextCard } from "@/components";
 type ServiceContentProps = {
   service: {
     name: string;
+    background: string;
     description: string[];
+    images: string[];
     benefits: TextCardProps[];
   };
   isActive: boolean;

@@ -8,13 +8,6 @@ import { services } from "./constants";
 
 import "./Services.scss";
 
-type Service = {
-  name: string;
-  background: string;
-  description: string[];
-  images: string[];
-};
-
 export function Services() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -25,18 +18,18 @@ export function Services() {
   return (
     <>
       <section className="services">
-        {services.map((service: Service, index: number) => (
+        {services.map((service, index) => (
           <ServiceItem key={index} service={service} onClick={() => handleSetIndex(index)} />
         ))}
       </section>
       <section className="service-details">
         <div className="service-details__content-wrapper">
-          {services.map((service: Service, index: number) => (
+          {services.map((service, index) => (
             <ServiceContent key={index} service={service} isActive={index === currentIndex} />
           ))}
         </div>
         <div className="service-details__image-wrapper">
-          {services.map((service: Service, index: number) => (
+          {services.map((service, index) => (
             <ServiceImage key={index} service={service} isActive={index === currentIndex} />
           ))}
         </div>

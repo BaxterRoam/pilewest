@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import { Header, Providers, Footer, GetInTouch } from "@/components";
+import { Header, Providers } from "@/components";
 
 import "@/styles/globals.scss";
 
@@ -42,8 +42,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Providers>
           <Header />
           {children}
-          {/* <GetInTouch /> */}
-          {/* <Footer /> */}
         </Providers>
         <Analytics />
         <SpeedInsights />
