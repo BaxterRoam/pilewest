@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Divider />
+      {/* <Divider />
       <section className="home-page__testimonials section">
         <div className="section-container">
           <header className="section-header">
@@ -181,7 +181,7 @@ export default function Home() {
             </div>
           </Slider>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
