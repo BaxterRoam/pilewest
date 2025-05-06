@@ -1,4 +1,4 @@
-import { Carousel, CarouselItem, Divider, TextCard, IconCard, ImageCard, CTA, Window, Slider } from "@/components";
+import { Carousel, CarouselItem, Divider, TextCard, IconCard, ImageCard, CTA, Window } from "@/components";
 
 import { statistics, competencies, capabilities, benefits } from "@/constants/cards";
 import { services } from "@/constants/windows";
